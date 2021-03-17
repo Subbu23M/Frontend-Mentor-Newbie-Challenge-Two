@@ -1,0 +1,84 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Kumbh Sans',sans-serif;
+  background-color: #19a2ae;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a {
+  color: white;
+}
+
+.colum {
+  padding-top: 10rem;
+}
+
+.colum .card .card-body img {
+  /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+  position: relative;
+  left: 110px;
+  bottom: 50px;
+  border: 7px solid white;
+  width: 6rem;
+}
+
+.colum .card .card-body h4 {
+  color: #2d3248;
+  margin-top: -2rem;
+  font-weight: 700;
+}
+
+.colum .card .card-body h4 span {
+  color: #969696;
+  font-weight: 400;
+}
+
+.colum .card .card-body h6 {
+  color: #969696;
+  font-weight: 400;
+}
+
+.colum .card .card-footer h5 {
+  color: #2d3248;
+  font-weight: 700;
+}
+
+.colum .card .card-footer h6 {
+  color: #969696;
+  font-weight: 400;
+}
+
+.bg-pattern-top {
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  left: 95px;
+  top: -50px;
+  width: 600px;
+  /* z-index:stacks one on each other based on value  */
+  z-index: -1;
+}
+
+.bg-pattern-bottom {
+  /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+  position: absolute;
+  width: 370px;
+  right: 170px;
+  top: 370px;
+  /* z-index:stacks one on each other based on value  */
+  z-index: -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .bg-pattern-top, .bg-pattern-bottom {
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

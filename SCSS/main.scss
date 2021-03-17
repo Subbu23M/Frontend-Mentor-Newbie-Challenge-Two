@@ -1,0 +1,117 @@
+// Colors
+
+// hsl - hue, saturation and lightness
+
+$DarkCyan: hsl(185, 75%, 39%); 
+
+$VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+
+$DarkGrayishBlue: hsl(227, 10%, 46%);
+
+$DarkGray: hsl(0, 0%, 59%);
+
+// Universal Effects
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans',sans-serif;
+    background-color: $DarkCyan;
+}
+
+a,a:hover{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+a{
+    color: white;
+}
+
+.colum{
+    padding-top: 10rem;
+
+    .card{
+
+        .card-body{
+            img{
+                /* position: relative, it’ll remain “in the flow” of the layout but you can move it around! */
+                position: relative;
+    
+                left: 110px;
+                bottom: 50px;
+    
+                // border: width style color
+                border:7px solid white ;
+    
+                width: 6rem;
+            }
+
+            h4{
+                color: $VeryDarkDesaturatedBlue;
+                margin-top: -2rem;
+                font-weight: 700;
+
+                span{
+                    color: $DarkGray;
+                    font-weight: 400;
+                }
+            }
+
+            h6{
+                color: $DarkGray;
+                font-weight: 400;
+            }
+        }
+
+        .card-footer{
+            h5{
+                color: $VeryDarkDesaturatedBlue;
+                font-weight: 700;
+            }
+
+            h6{
+                color: $DarkGray;
+                font-weight: 400;
+            }
+        }
+
+    }
+
+}
+
+.bg-pattern-top{
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    // so use top bottom left and right
+    position: absolute;
+
+    left: 95px;
+    top: -50px;
+    width: 600px;
+
+    /* z-index:stacks one on each other based on value  */
+    z-index: -1;
+}
+
+.bg-pattern-bottom{
+    /* position: absolute takes elements “out of flow” so its grid space gets collapsed. */
+    // so use top bottom left and right
+    position: absolute;
+
+    width: 370px;
+    right: 170px;
+    top: 370px;
+
+    /* z-index:stacks one on each other based on value  */
+    z-index: -1;
+}
+
+// Media Queries
+// On XS Screens
+@media only screen and (max-width:600px){
+
+    .bg-pattern-top,.bg-pattern-bottom{
+        display: none;
+    }
+    
+}
